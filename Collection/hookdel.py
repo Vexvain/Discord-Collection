@@ -1,5 +1,6 @@
 # Delete webhooks by force
 # Usage: py hookdel.py <webhook url>
+# Made by: checksum
 
 import requests
 import sys
