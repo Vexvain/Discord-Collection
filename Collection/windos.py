@@ -1,4 +1,5 @@
 # Sends a URI that causes a black screen of death on Windows
+# Usage: py windos.py <token> <channel id>
 # Made by: checksum 
 
 import requests
