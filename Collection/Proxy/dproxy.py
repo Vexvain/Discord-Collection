@@ -1,3 +1,5 @@
+# Sends auto updated proxies in a simple text file on discord
+# Run: pip3 install -r requirements.txt
 import requests
 from discord import Embed, File
 from discord.ext import commands
