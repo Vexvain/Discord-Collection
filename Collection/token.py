@@ -1,5 +1,6 @@
 # Disable accounts with authorization tokens
 # Usage: py token.py <token>
+# Made by: checksum
 
 import requests
 import sys
