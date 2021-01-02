@@ -1,5 +1,5 @@
 # Disable accounts with authorization tokens
-# Usage: py example.py <token>
+# Usage: py token.py <token>
 
 import requests
 import sys
