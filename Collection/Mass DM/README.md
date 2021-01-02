@@ -1,4 +1,4 @@
-*Requirements
+# Requirements
 
 `npm install -d` It'll get the prerequisite program for you 
 
