@@ -1,5 +1,5 @@
 # Disable accounts with authorization tokens
-# Author: checksum (@0daySkid)
+# Usage: py example.py <token>
 
 import requests
 import sys
