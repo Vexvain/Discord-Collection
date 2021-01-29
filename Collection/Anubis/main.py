@@ -1,5 +1,3 @@
-# Scripted by Catterall (https://github.com/Catterall)
-
 import discord
 import os
 import asyncpg
@@ -10,14 +8,14 @@ from colorama import Fore, init
 init()
 
 
-# Check for basic files needed and write the temp file.
+# check for basic files for tmp file
 
 DATA = check_for_run_settings()
 write_temp()
 check_for_servers()
 
 
-# Sets the bot prefix to the prefix specified in the JSON file.
+# sets bot prefix to the one specified in the JSON file
 
 if DATA.get("prefix").strip().replace(" ", "") == "":
     display_start_error()
@@ -27,20 +25,19 @@ else:
     bot = commands.Bot(command_prefix=DATA.get("prefix"), intents=intents)
 
 
-# Status' to be cycled continously as the bot runs.
-# You add or change these status' here - make sure to have at least one.
+# cycle status continously as the bot runs
+# add or change the status here. make sure to have a minimum of one
 
 status = cycle(['against raiders!', f'{DATA.get("prefix")}help for commands!'])
 
 
-# Removes the default help command (Help command is replaced by an embed
-# further down in the code).
+# gets rid of the default help command
 
 bot.remove_command('help')
 
 
-# Creates the database pool from the postresql database "levels_db" set up
-# in the installation (See README.md).
+# creates data pool from the postresql database. 
+# "levels_db" set up in the installation. check the README.md
 
 async def create_db_pool():
     try:
@@ -49,7 +46,7 @@ async def create_db_pool():
         display_start_error()
 
 
-# Load/Unload/Reload: Used for messing with Cogs.
+# load/unload/reload. messes with cogs
 
 @bot.command()
 async def load(ctx, extension):
@@ -82,7 +79,7 @@ async def reload(ctx, extension):
     await ctx.send(embed=embed)
 
 
-# On ready.
+# ready
 
 @bot.event
 async def on_ready():
@@ -90,7 +87,7 @@ async def on_ready():
     display_title_screen()
 
 
-# On joining a server.
+# joining server
 
 @bot.event
 async def on_guild_join(guild):
@@ -99,7 +96,7 @@ async def on_guild_join(guild):
         f.close()
 
 
-# On error (error handling).
+# error handling
 
 @bot.event
 async def on_command_error(ctx, error):
@@ -131,7 +128,7 @@ async def on_command_error(ctx, error):
         print(error)
 
 
-# Help embed.
+# help embed
 
 @bot.command()
 async def help(ctx):
@@ -247,14 +244,14 @@ async def help(ctx):
     await author.send(embed=embed)
 
 
-# Search for updates.
+# update check
 
 search_for_updates()
 os.system('cls')
 print(f"{Fore.LIGHTGREEN_EX}Loading Anubis - please wait.{Fore.RESET}")
 
-# Cycle through status every ten seconds.
-# Change this value to however long you want each status to last (integer).
+# status cycle every 10 seconds
+# change the value to however long you want each status to last
 
 
 @tasks.loop(seconds=10)
@@ -262,7 +259,7 @@ async def change_status():
     await bot.change_presence(activity=discord.Game(next(status)))
 
 
-# Search the "Cogs" folder for Cogs.
+# search cogs folder for "cogs"
 
 for filename in os.listdir('./cogs'):
     if filename.endswith('.py') and "anubis" not in filename:
@@ -271,11 +268,11 @@ for filename in os.listdir('./cogs'):
         continue
 
 
-# Asycio loop.
+# loop
 
 bot.loop.run_until_complete(create_db_pool())
 
-# Run the bot using the token specified in the JSON file.
+# run the bot using the token specified in the JSON file
 
 try:
     bot.run(DATA.get("token"))
