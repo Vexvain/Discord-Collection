@@ -45,8 +45,8 @@ here are the following commands (the commands will be represented here with a pr
 
 - `v!mass_nuke <code>`: this will make Anubis run the nuke command in any server it is in (*one by one, not at the same time*)
 
-- `a!raid <code> <role_name> <nickname> <channel_name> <channel_num> <message>`: this will make Anubis create a new role with a given name (`<role_name>`), assign all members in any given server with that role, then run the nickname command with a given nickname (`<nickname>`), then create `<channel_num>` number of channels (use an integer) with a given name (`<chanel_name>`) then run the spam command on said channels with a given message (`<message>`)
+- `a!raid <code> <role_name> <nickname> <channel_name> <channel_num> <message>`: this will make Anubis create a new role with a given name (`<role_name>`), assign all members in any given server with that role, then run the nickname command with a given nickname (`<nickname>`), then create `<channel_num>` number of channels (use an integer) with a given name (`<chanel_name>`) then run the spam command on said channels with a given message (`<message>`) <br/>
 
-- when the bot joins a server, it will create its own role. in order for the bot to directly affect a member (mass_dm, nuke, mass_nuke, raid) its role must be above any given member's role
+when the bot joins a server, it will create its own role. in order for the bot to directly affect a member (mass_dm, nuke, mass_nuke, raid) its role must be above any given member's role
 
-- all commands will delete themselves after being entered to help go undetected
+all commands will delete themselves after being entered to help go undetected
