@@ -1,9 +1,3 @@
-# Scripted by Catterall (https://github.com/Catterall).
-# Bot under the GNU General Public Liscense v2 (1991).
-
-
-# Modules
-
 import discord
 import requests
 import re
@@ -15,8 +9,8 @@ class Surfing(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
 
-    # Grab a definition from dictionary.com of the word provided by the user
-    # and then show it to them.
+    # snatch a definition from dictionary.com of the word provided by the user
+    # and then show it to them
 
     @commands.command()
     async def define(self, ctx, *, word=f""):
@@ -56,7 +50,3 @@ class Surfing(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Surfing(bot))
-
-
-# Scripted by Catterall (https://github.com/Catterall).
-# Bot under the GNU General Public Liscense v2 (1991).
