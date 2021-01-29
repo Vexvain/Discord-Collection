@@ -1,9 +1,3 @@
-# Scripted by Catterall (https://github.com/Catterall).
-# Bot under the GNU General Public Liscense v2 (1991).
-
-
-# Modules
-
 import json
 import os
 import random as r
@@ -16,7 +10,7 @@ CODE = 0
 DATA = {}
 
 
-# Check for run_settings.json and generate a new file if not found.
+# check for run_settings.json and generate a new file if not found
 
 def check_for_run_settings():
     global DATA
@@ -35,7 +29,7 @@ def check_for_run_settings():
         display_start_error()
 
 
-# Check for code in temp.txt.
+# check for code in temp.txt
 def check_for_temp_code():
     global CODE
     try:
@@ -47,7 +41,7 @@ def check_for_temp_code():
         display_start_error()
 
 
-# Write a new temp file with a "CODE" used by the program.
+# write a new temp file with a "CODE" used by the program
 
 def write_temp():
     global CODE
@@ -60,7 +54,7 @@ def write_temp():
     return
 
 
-# Check for the servers.txt file and generate a new file if not found.
+# check for the servers.txt file and generate a new file if not found
 
 def check_for_servers():
     try:
@@ -72,8 +66,8 @@ def check_for_servers():
     return
 
 
-# Display an error screen if an error is encountered whilst starting the
-# program.
+# display an error screen if an error is encountered whilst starting the
+# program
 
 def display_start_error():
     os.system('cls')
@@ -88,7 +82,7 @@ def display_start_error():
                                      ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝ ╚═════╝ ╚═╝╚══════╝
 
 
-      {Fore.WHITE}Human. There has been an error attempting to run anubis. The following measures may solve the issue:
+      {Fore.WHITE}An error has occured while trying to run Anubis. The following measures may solve the issue:
 
 
 
@@ -99,17 +93,14 @@ def display_start_error():
 {Fore.GREEN}-{Fore.WHITE}If the settings file is perfect, check whether you have enabled Privallged Gateway Intents on your bot's page.
 
 
-{Style.DIM}{Fore.GREEN}If the issue persists after all the above measures are taken, you can create an issue here:
-{Style.BRIGHT}{Back.RESET}{Fore.WHITE}https://github.com/Catterall/discord-raidkit/issues
-
-{Fore.YELLOW}Thank you for using Anubis and apologies for all errors encountered! -Catterall.{Fore.RESET}
+{Fore.YELLOW}Thank you for using Anubis and apologies for all errors encountered!{Fore.RESET}
 '''.replace('█', f'{Fore.WHITE}█{Fore.BLUE}'))
     input()
     os.system('cls')
     os._exit(1)
 
 
-# Display the title screen of the program.
+# display the title screen of the program
 
 def display_title_screen():
     os.system('cls')
@@ -140,8 +131,6 @@ then create x number of channels, then message everyone with a message, then spa
 members you wish to ban (i.e. move the role as high as possible).
 
 {Fore.LIGHTCYAN_EX}To refresh this window back to this page, use the command: {Fore.LIGHTGREEN_EX}{DATA.get('prefix')}refresh {CODE}
-
-{Fore.LIGHTRED_EX}Anubis created by Catterall (View for full guide): {Fore.WHITE}https://www.github.com/Catterall/discord-raidkit{Style.DIM}{Fore.RED}'''.replace('█', f'{Fore.WHITE}█{Fore.BLUE}'))
     return
 
 
@@ -192,7 +181,7 @@ def search_for_updates():
     header = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.75 Safari/537.36",
         "X-Requested-With": "XMLHttpRequest"}
-    url = f"https://github.com/Catterall/discord-raidkit/releases/latest"
+    url = f"https://github.com/Vexvain/Discord-Collection/releases/latest"
 
     os.system('cls')
     print("Searching for updates.")
@@ -218,7 +207,7 @@ def search_for_updates():
                    ╚═╝  ╚═══╝╚══════╝ ╚══╝╚══╝      ╚═════╝ ╚═╝     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝╚═╝
 
 
-              {Fore.LIGHTRED_EX}Human. There has been a brand new update to the discord raidkit. You can find the update here:
+              {Fore.LIGHTRED_EX}A NEW UPDATE HAS BEEN FOUND! You can find the update here:
 
                               {Fore.LIGHTBLUE_EX}{update_link}
 
@@ -226,6 +215,3 @@ def search_for_updates():
         input()
         return
 
-
-# Scripted by Catterall (https://github.com/Catterall).
-# Bot under the GNU General Public Liscense v2 (1991).
