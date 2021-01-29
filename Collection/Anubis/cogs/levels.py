@@ -1,9 +1,3 @@
-# Scripted by Catterall (https://github.com/Catterall).
-# Bot under the GNU General Public Liscense v2 (1991).
-
-
-# Modules
-
 from discord.ext import commands
 import discord
 
@@ -18,8 +12,8 @@ class Levels(commands.Cog):
         cur_xp = user['xp']
         cur_lvl = user['lvl']
 
-        # Checks a users experience and current level to see if they should
-        # level up.
+        # checks a users experience and current level to see if they should
+        # level up
 
         if cur_xp >= round((3 * (cur_lvl ** 7)) / 10):
             await self.bot.pg_con.execute("UPDATE users SET lvl = $1 WHERE user_id = $2 AND guild_id = $3", cur_lvl + 1, user['user_id'], user['guild_id'])
@@ -27,7 +21,7 @@ class Levels(commands.Cog):
         else:
             return False
 
-    # Gain xp every message.
+    # gain xp every message
 
     @commands.Cog.listener()
     async def on_message(self, message):
@@ -98,7 +92,3 @@ class Levels(commands.Cog):
 
 def setup(bot):
     bot.add_cog(Levels(bot))
-
-
-# Scripted by Catterall (https://github.com/Catterall).
-# Bot under the GNU General Public Liscense v2 (1991).
