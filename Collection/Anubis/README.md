@@ -8,43 +8,45 @@
 
 to use Anubis, run the `main.py` file. you should be greeted with a warning screen. press the return (enter) key. you should now notice a new file, named `run_settings.json`. this file contains three settings that you must determine before using Anubis. open the JSON file with notepad if you have no default program. <br/>
 
-. Replace the default password text with your PostreSQL master password.
-2. You must set a bot prefix. Any prefix will do, but try to avoid exceptionally common prefixes, such as !
-3. Replace the default token text with your discord bot's token.
+1. replace the default password text with your PostreSQL master password
+2. you must set a bot prefix. any prefix will do, but try to avoid exceptionally common prefixes, such as !
+3. replace the default token text with your discord bot's token. <br/>
 
-Remember to save the file! What's that? You don't currently have a discord bot? Well, luckily for you, setting one up is extremely easy and does not require any downloads. 
+don't forget to save the file after :)
 
-Head to the discord developers page [here](https://www.discord.com/developers) and click, "New Application". Name the application with the same name that you will name your bot. After creating the application, look to the left side and click 'Bot'. From here, click 'Add Bot'. Before copying the token, first turn on both privileged gateway intents - you can now copy your bots token and place it in the run_settings.json file. To get the invite link, head to the OAuth2 section, scroll down and check the "Bot" checkbox, then check the "Administrator" checkbox underneath - the link generated will allow anyone to invite the bot and will give the bot administrator permissions.
+# Discord Bot Setup
 
-##### **Using Anubis:**
-Anubis works in a simple way. Each of the malicious commands, only visible to you, is diplayed on the main terminal screen. A command in Anubis is made up of two or three things:
-1. **The prefix and command name**: For example, `a!nuke`.
+head to the discord developers page https://www.discord.com/developers and click **new application**. name the application the same as your bot. look to the left side and click **bot**. click **add bot**. before copying the token, first turn on both privileged gateway intents. now you can now copy your bots token and place it in the **run_settings.json file**. to get the invite link, head to the OAuth2 section, scroll down and check the **bot** checkbox, then check the **administrator** checkbox underneath - the link generated will allow anyone to invite the bot and will give the bot administrator permissions
 
-2. **The command code**: For example, `2812`. This is to prevent people testing if the bot is this bot immediatly by just running a command found here.
-3. **The command arguments**: For example, `<message>`. These are used by the command to carry out their task and can be used by simply appending it to the end of a command (e.g. `a!spam 2812 hello!` - `hello!` is the `<message>` parameter).
+# Commands
 
-Anubis has the following commands (the commands will be represented here with a prefix of 'a!'):
-- `a!leave <code> <server>`: This command will make Anubis leave a given server (`<server>`).
+each command is diplayed on the main terminal screen. a command in Anubis is made up of two or three things: <br/>
 
-- `a!mass_leave <code>`: This command will make Anubis leave every server it is currently in.
+1. **The prefix and command name**: example, `a!nuke`.
+2. **The command code**: example, `2812`. prevents people testing if the bot is this bot
+3. **The command arguments**: example, `<message>`. used by the command to carry out their task and can be used by simply appending it to the end of a command (e.g. `a!spam 2812 hello!` - `hello!` is the `<message>` parameter)
 
-- `a!mass_dm <code> <nickname>`: This command will give every member in any given server a nickname of your choice.
+here are the following commands (the commands will be represented here with a prefix of 'v!'):
+- `v!leave <code> <server>`: this will make Anubis leave a given server (`<server>`)
 
-- `a!mass_dm <code> <message>`: This command will make Anubis message everyone in any given server with a given message (`<message>`).
+- `v!mass_leave <code>`: this will make Anubis leave every server it is currently in
 
-- `a!spam <code> <message>`: This command will make Anubis spam every text channel in any given server with a given message (`<message>`) until stopped.
+- `v!mass_dm <code> <nickname>`: this will give every member in any given server a nickname of your choice
 
-- `a!cpurge <code>`: This command will delete every communication channel in any given server.
+- `v!mass_dm <code> <message>`: this will make Anubis message everyone in any given server with a given message (`<message>`)
 
-- `a!admin <code> <role_name>`: This command will grant you, in any given server, an administrator role with a given name (`<role_name>`).
+- `v!spam <code> <message>`: this will make Anubis spam every text channel in any given server with a given message (`<message>`) until stopped
 
-- `a!nuke <code>`: This command will make Anubis ban all members, delete all channels, delete all roles and delete all of the emojis in any given server.
+- `v!cpurge <code>`: this will delete every communication channel in any given server
 
-- `a!mass_nuke <code>`: This command will make Anubis run the nuke command in any server it is in (*one by one, not at the same time*).
+- `v!admin <code> <role_name>`: this will grant you, in any given server, an administrator role with a given name (`<role_name>`)
 
-- `a!raid <code> <role_name> <nickname> <channel_name> <channel_num> <message>`: This command will make Anubis create a new role with a given name (`<role_name>`), assign all members in any given server with that role, then run the nickname command with a given nickname (`<nickname>`), then create `<channel_num>` number of channels (use an integer) with a given name (`<chanel_name>`) then run the spam command on said channels with a given message (`<message>`).
+- `v!nuke <code>`: this will make Anubis ban all members, delete all channels, delete all roles and delete all of the emojis in any given server
 
-All of these commands are usable without permissions, as long as the bot is in the server. However, there are some important rules to take note of:
-- When the bot is invited, it will create its own role. In order for the bot to directly affect a member (mass_dm, nuke, mass_nuke, raid) its role must be above any given member's role. **TL;DR, move the bots role as high as possible by utilising the admin command to give you the permissions to do so and/or by manipulating the higher members to do it for you.**
+- `v!mass_nuke <code>`: this will make Anubis run the nuke command in any server it is in (*one by one, not at the same time*)
 
-- Commands must be used like regular commands - in other words, in a text channel. Pretty much every server has a text channel, although it is best to find one that your sure no one is currently watching. Commands will delete themselves after being entered to help you go further undetected. 
+- `a!raid <code> <role_name> <nickname> <channel_name> <channel_num> <message>`: this will make Anubis create a new role with a given name (`<role_name>`), assign all members in any given server with that role, then run the nickname command with a given nickname (`<nickname>`), then create `<channel_num>` number of channels (use an integer) with a given name (`<chanel_name>`) then run the spam command on said channels with a given message (`<message>`)
+
+- when the bot joins a server, it will create its own role. in order for the bot to directly affect a member (mass_dm, nuke, mass_nuke, raid) its role must be above any given member's role
+
+- all commands will delete themselves after being entered to help go undetected
