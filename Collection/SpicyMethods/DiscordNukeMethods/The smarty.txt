@@ -1,5 +1,3 @@
-Note: This is only for smarts.
-
-1. Make an alt.
-2. Try to token log the owner or use some phishing links or make your own attack to get the server owner Discord token.
-3. If you have successfully got the Discord owner token use their own token to nuke their own server.
+1. Make an alt (like always)
+2. Token log the owner or use some phishing links to snatch their Discord token
+3. If successful, use their token to login and nuke their own server
