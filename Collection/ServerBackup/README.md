@@ -1,16 +1,15 @@
-# discordServerBackup
-A simple bot to backup your Discord servers.
+a bot to backup your Discord servers
 
-## Installation
+## Install
 NpmJS:
 ```
 npm i discord-backup discord.js path
 ```
 
-## Setup
+## Easy setup
 1. Open index.js
-2. Find **dsb > token** then place your Discord bot token there and add your Discord user id in **dsb > access**.
-3. Save it.
+2. Find **dsb > token** then place your Discord bot token there and add your Discord user ID in **dsb > access**
+3. Save it
 
 ## Usage
 Running the bot:
