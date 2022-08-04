@@ -1,7 +1,6 @@
-# channelMessagesImporter
-Import messages to a channel from the exported messages from channelMessagesSaver.
+send messages to a channel from the exported messages from channelMessagesSaver
 
-## Installation
+## Install
 NpmJS:
 ```
 npm i request-async
@@ -12,5 +11,5 @@ npm i request-async
 usage: node index.js <webhookLink> <messages>
 ```
 
-- webhookLink - The webhook link to use.
-- message - The file that contains messages exported using "channelMessagesSaver".
+- webhookLink - The webhook link to use
+- message - The file that contains messages exported using "channelMessagesSaver"
