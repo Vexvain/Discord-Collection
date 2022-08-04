@@ -1,5 +1,4 @@
-# corruptor
-Corrupts your Discord.
+corrupts your Discord
 
 ## Usage
 ```
