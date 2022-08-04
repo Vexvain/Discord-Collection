@@ -1,5 +1,4 @@
-1. Open Inspect Element.
-2. Go to Network.
-3. Send any message on any channel then find **messages**.
-4. Scroll down and find authorization.
-5. Fast right?
+1. Open Inspect Element
+2. Go to *Network*
+3. Send any message on any channel then find **messages**
+4. Scroll down and find authorization
