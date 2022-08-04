@@ -14,7 +14,7 @@ const plugins = fs.readdirSync("./plugins").map((f) => `./plugins/${f}`)
 if(!token) return console.log("usage: node index.js <token>")
 
 user.on("ready", ()=>{
-    console.log("AIO Sniper is running.")
+    console.log("DSniper is running.")
 })
 
 user.on("message", (message)=>{
