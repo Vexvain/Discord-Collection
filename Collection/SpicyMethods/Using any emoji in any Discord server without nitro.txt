@@ -1,5 +1,4 @@
-Do the steps in "Using emoji on other servers without nitro.txt" first.
+Do the steps in "Using emoji on other servers without nitro.txt" first
 
-1. After you paste the GIF link in the channel.
-2. Hover your mouse in the GIF then click the star to favorite the GIF.
-3. Your done! To use the GIF again without opening inspect element just go to the "GIF" "Favorites" then click the GIF.
+1. After you paste the GIF link in the channel, hover your mouse on the GIF then click the star to favorite the GIF
+3. To use the GIF again without opening inspect element, just go to the "GIF" "Favorites" then click the GIF
