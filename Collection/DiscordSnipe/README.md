@@ -1,7 +1,6 @@
-# aioDiscordSniper
-A fast, flexible & extensible Discord sniper.
+basic Discord sniper that goes pewpew
 
-## Installation
+## Install
 NpmJS:
 ```
 npm i discord.js-selfbot
@@ -12,4 +11,4 @@ npm i discord.js-selfbot
 node index.js <token>
 ```
 
-- token - The Discord account token to use.
+**token = The account token to use**
