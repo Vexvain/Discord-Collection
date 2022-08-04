@@ -1,7 +1,6 @@
-# disabler
-Discord account disabler.
+Discord account disabler
 
-## Installation
+## Install
 NpmJS:
 ```
 npm i request-async
@@ -12,4 +11,4 @@ npm i request-async
 node index.js <token>
 ```
 
-- token - The Discord account token.
+**token = the Discord account token**
