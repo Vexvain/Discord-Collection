@@ -1,7 +1,6 @@
-# 247Account
-A simple code that runs your Discord account 24/7
+This will run your Discord account 24/7 for whatever purpose you desire
 
-## Installation
+## Install
 NpmJS:
 ```
 npm i discord.js-selfbot
@@ -12,4 +11,4 @@ npm i discord.js-selfbot
 node index.js <token>
 ```
 
-- token - The Discord account token to use.
+**token = the Discord account token to use**
