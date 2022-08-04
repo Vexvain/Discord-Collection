@@ -1,7 +1,6 @@
-# auditLogFlooder
-Flood any Discord server audit log by sending junk invite links.
+Flood Discord server audit logs by sending junk invite links
 
-## Installation
+## Install
 NpmJS:
 ```
 npm i argparse request-async delay
@@ -14,9 +13,9 @@ usage: index.js [-h] -ci CHANNELID -a AMOUNT -t TOKEN
 optional arguments:
   -h, --help            show this help message and exit
   -ci CHANNELID, --channelID CHANNELID
-                        Any channel ID on the target server.
+                        any channel ID on the target server
   -a AMOUNT, --amount AMOUNT
-                        The amount of junk log to send in the server's audit log.
+                        the amount of junk to send in the server's audit log
   -t TOKEN, --token TOKEN
-                        Discord account token to use.
+                        discord account token to use
 ```
